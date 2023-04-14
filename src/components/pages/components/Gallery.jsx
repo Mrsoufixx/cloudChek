@@ -1,9 +1,10 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
-SwiperCore.use([Navigation, Pagination]);
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import "swiper/swiper-bundle.css";
+import ChevroletBelAir from "../../../assets/Chevrolet Bel Air.jpg"
 
+SwiperCore.use([Navigation, Pagination]);
 
 const Gallery = () => {
   return (
@@ -14,29 +15,62 @@ const Gallery = () => {
           spaceBetween={0}
           slidesPerView={1}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           pagination={{ clickable: true }}
           className="mySwiper"
         >
-          <SwiperSlide><img src="https://www.jamesedition.com/stories/wp-content/uploads/2021/06/photo-950x628.png" alt="Car" className="w-full h-auto object-cover" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cadillac_Series_6400_Eldorado_Biarritz_%2822022010200%29.jpg/1024px-Cadillac_Series_6400_Eldorado_Biarritz_%2822022010200%29.jpg" alt="Car" className="w-full h-auto object-cover" /></SwiperSlide>
-          <SwiperSlide><img src="https://www.vh.ma/wp-content/uploads/2020/08/Jaguar-E-Type-ouverture-770x385.jpg" alt="Car" className="w-full h-auto object-cover" /></SwiperSlide>
-          <SwiperSlide><img src="https://cdn2.mecum.com/auctions/sc0517/sc0517-282166/images/sc0517-282166_12.jpg?1494711705000" alt="Car" className="w-full h-auto object-cover" /></SwiperSlide>
-          <SwiperSlide><img src="https://cdn.dealeraccelerate.com/cmc/1/108/6344/1920x1440/1950-chevrolet-bel-air" alt="Car" className="w-full h-auto object-cover" /></SwiperSlide>
-          <SwiperSlide><img src="https://images.classic.com/vehicles/442d998792fc9f848278e129e4def17825f2e755.jpg?w=672&h=576" alt="Car" className="w-full h-auto object-cover" /></SwiperSlide>
+          <SwiperSlide>
+            <img src={ChevroletBelAir} alt="Car" className="w-full h-auto object-cover" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cadillac_Series_6400_Eldorado_Biarritz_%2822022010200%29.jpg/1024px-Cadillac_Series_6400_Eldorado_Biarritz_%2822022010200%29.jpg"
+              alt="Car"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://images.unsplash.com/photo-1587750059638-e7e8c43b99fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
+              alt="Car"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://images.unsplash.com/photo-1591552149543-0f98a83e9bcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+              alt="Car"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://cdn.dealeraccelerate.com/cmc/1/108/6344/1920x1440/1950-chevrolet-bel-air"
+              alt="Car"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://images.classic.com/vehicles/442d998792fc9f848278e129e4def17825f2e755.jpg?w=672&h=576"
+              alt="Car"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+          <div className="flex justify-center mt-4">
+            <div className="swiper-button-prev mr-2"></div>
+            <div className="swiper-pagination"></div>
+            <div className="swiper-button-next ml-2"></div>
+          </div>
         </Swiper>
-        <div className="flex justify-center mt-4">
-          <div className="swiper-button-prev mr-2"></div>
-          <div className="swiper-pagination"></div>
-          <div className="swiper-button-next ml-2"></div>
-        </div>
       </div>
     </section>
   );
 };
 
+export default Gallery;
 
 // const Gallery = () => {
 //   return (
@@ -55,5 +89,3 @@ const Gallery = () => {
 //     </section>
 //   );
 // };
-
-export default Gallery;

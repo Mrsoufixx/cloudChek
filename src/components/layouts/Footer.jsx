@@ -1,26 +1,27 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaPhone, FaEnvelope,FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import logo from "../../assets/logo"
+
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-10 ">
+    <footer className="bg-gray-800 text-white py-10 z-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-1/3 px-4">
-            <h3 className="text-xl font-bold mb-4">About Us</h3>
-            <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, velit eu finibus semper, lorem neque tristique massa, in venenatis velit nisl non enim.</p>
-            <div className="flex space-x-4">
+          <div className="w-full md:w-1/3 px-4 flex flex-col gap-4 items-center justify-around mb-4">
+            
+            {logo}
+            <div className="flex justify-center space-x-4">
               <a href="#" className="text-white hover:text-gray-400"><FaFacebook size={24} /></a>
               <a href="#" className="text-white hover:text-gray-400"><FaInstagram size={24} /></a>
               <a href="#" className="text-white hover:text-gray-400"><FaTwitter size={24} /></a>
             </div>
           </div>
-          <div className="w-full md:w-1/3 px-4">
+          <div className="w-full md:w-1/3 px-4 flex flex-col items-center gap-4 mb-4">
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <p className="mb-4">123 Main St</p>
-            <p className="mb-4">Anytown, USA</p>
-            <p className="mb-4">Email: info@classiccars.com</p>
-            <p className="mb-4">Phone: (555) 555-1212</p>
+            
+            <p className="mb-4 flex items-center gap-4"><FaEnvelope/> info@classiccars.com</p>
+            <p className="mb-4 flex items-center gap-4"><FaPhone/> (555) 555-1212</p>
           </div>
           <div className="w-full md:w-1/3 px-4">
             <h3 className="text-xl font-bold mb-4">Newsletter</h3>

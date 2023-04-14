@@ -4,7 +4,7 @@ import maplibregl from 'maplibre-gl';
 
 const MapSection = () => {
   return (
-    <section id="location" className="py-20">
+    <section id="location" className="py-20 z-0">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">Location</h2>
         <div className="relative h-screen">

@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo';
+
+
 
 const Navbar = () => {
   return (
 
-    <header className="bg-gray-800">
-      <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <a href="/" className="text-white text-xl font-bold">Classic Cars</a>
-        <ul className="flex space-x-6">
+    <header className="bg-gray-800 sticky top-0 z-50">
+      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" className="text-white text-xl font-bold">{logo}</a>
+        <ul className="flex space-x-6 text-xl">
           <li><a href="/featured-cars" className="text-white hover:text-gray-400">Featured Cars</a></li>
-          <li><a href="/gallery" className="text-white hover:text-gray-400">Gallery</a></li>
-          <li><a href="/contact" className="text-white hover:text-gray-400">Contact</a></li>
+          <li><a href="/gallery" className="text-white  hover:text-gray-400">Gallery</a></li>
+          <li><a href="/contact" className="text-white  hover:text-gray-400">Contact</a></li>
         </ul>
         <button className="bg-white text-gray-800 font-bold py-2 px-4 rounded hover:bg-gray-200">Login</button>
       </nav>
